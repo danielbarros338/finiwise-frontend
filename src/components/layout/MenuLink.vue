@@ -1,14 +1,6 @@
 <template>
-  <q-item
-    clickable
-    tag="a"
-    target="_blank"
-    :href="link"
-  >
-    <q-item-section
-      v-if="icon"
-      avatar
-    >
+  <q-item clickable tag="a" target="_blank" :href="link">
+    <q-item-section v-if="icon" avatar>
       <q-icon :name="icon" />
     </q-item-section>
 
@@ -20,18 +12,13 @@
 </template>
 
 <script setup lang="ts">
+import { MenuLinkProps } from 'src/interfaces/menu-link.ts';
+
 defineOptions({
-  name: 'EssentialLink'
+  name: 'MenuLink',
 });
 
-export interface EssentialLinkProps {
-  title: string;
-  caption?: string;
-  link?: string;
-  icon?: string;
-};
-
-withDefaults(defineProps<EssentialLinkProps>(), {
+withDefaults(defineProps<MenuLinkProps>(), {
   caption: '',
   link: '#',
   icon: '',
