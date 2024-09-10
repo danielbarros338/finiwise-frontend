@@ -2,10 +2,6 @@
   <q-layout view="lHh Lpr lFf">
     <q-header style="background: var(--color-fw-primary)" elevated>
       <q-toolbar class="row justify-between">
-        <q-btn flat dense to="/">
-          <q-img src="src/assets/images/finiwise-logo.png" width="50px" />
-        </q-btn>
-
         <q-btn
           flat
           dense
@@ -14,6 +10,10 @@
           aria-label="Menu"
           @click="toggleLeftDrawer"
         />
+
+        <q-btn flat dense to="/">
+          <q-img src="src/assets/images/finiwise-logo.png" width="50px" />
+        </q-btn>
       </q-toolbar>
     </q-header>
 
@@ -40,7 +40,13 @@ defineOptions({
   name: 'MainLayout',
 });
 
-const linksList: MenuLinkProps[] = [];
+const linksList: MenuLinkProps[] = [
+  {
+    title: 'Principal',
+    link: '/',
+    icon: 'home',
+  },
+];
 const leftDrawerOpen = ref(false);
 
 function toggleLeftDrawer() {
