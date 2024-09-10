@@ -46,6 +46,21 @@ const linksList: MenuLinkProps[] = [
     link: '/',
     icon: 'home',
   },
+  {
+    title: 'Ganhos',
+    link: '/earnings',
+    icon: 'attach_money',
+  },
+  {
+    title: 'Gastos',
+    link: '/revenues',
+    icon: 'money_off',
+  },
+  {
+    title: 'Sair',
+    link: '/login',
+    icon: 'exit_to_app',
+  },
 ];
 const leftDrawerOpen = ref(false);
 

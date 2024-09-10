@@ -2,6 +2,15 @@
 
 :root {
   --color-fw-primary: #1e1e1e;
+  --color-fw-secondary: #ffa100;
 
   font-family: 'Roboto', sans-serif;
+}
+
+.bg-fw-primary {
+  background: var(--color-fw-primary);
+}
+
+.bg-fw-secondary {
+  background: var(--color-fw-secondary);
 }
