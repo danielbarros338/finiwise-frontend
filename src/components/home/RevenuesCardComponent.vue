@@ -1,6 +1,6 @@
 <template>
   <q-card>
-    <q-card-section class="text-h6">Saldo</q-card-section>
+    <q-card-section class="text-h6">Gastos</q-card-section>
 
     <q-separator inset />
 
@@ -14,6 +14,6 @@
 import ApexArea from 'src/components/charts/ApexArea.vue';
 
 defineOptions({
-  name: 'BalanceCardComponent',
+  name: 'RevenuesCardComponent',
 });
 </script>
