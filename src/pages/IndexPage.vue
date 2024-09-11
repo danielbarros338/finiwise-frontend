@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-md bg-fw-primary-light">
+  <q-page class="q-pa-md">
     <div class="row justify-between">
       <div class="col-xs-12 col-md-6 q-mb-sm">
         <BalanceCardComponent />

@@ -1,12 +1,13 @@
 <template>
-  <q-item clickable tag="a" target="_blank" :href="link">
+  <q-item clickable>
     <q-item-section v-if="icon" avatar>
       <q-icon :name="icon" />
     </q-item-section>
 
     <q-item-section>
-      <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>{{ caption }}</q-item-label>
+      <q-btn flat dense :to="link" class="justify-start"
+        >{{ title }} {{ caption }}</q-btn
+      >
     </q-item-section>
   </q-item>
 </template>

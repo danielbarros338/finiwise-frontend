@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr lFf" class="bg-fw-primary-light">
     <q-header style="background: var(--color-fw-primary)" elevated>
       <q-toolbar class="row justify-between">
         <q-btn
@@ -17,8 +17,8 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <q-list>
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered :width="200">
+      <q-list style="width: 100px">
         <MenuLink v-for="link in linksList" :key="link.title" v-bind="link" />
       </q-list>
     </q-drawer>
