@@ -2,13 +2,21 @@
 
 :root {
   --color-fw-primary: #1e1e1e;
+  --color-fw-primary-light: #2e2e2e;
   --color-fw-secondary: #ffa100;
 
+  --color-text-primary: #5e5e5e;
+
   font-family: 'Roboto', sans-serif;
+  color: var(--color-text-primary);
 }
 
 .bg-fw-primary {
   background: var(--color-fw-primary);
+}
+
+.bg-fw-primary-light {
+  background: var(--color-fw-primary-light);
 }
 
 .bg-fw-secondary {
