@@ -46,7 +46,7 @@
         <q-card-section class="q-pt-none">
           <div class="row">
             <q-btn class="q-mb-sm" style="width: 100%" label="Entrar" flat @click="login" />
-            <q-btn style="width: 100%" label="Registrar" color="orange" @click="register" />
+            <q-btn style="width: 100%" label="Registrar" color="orange" to="register" />
           </div>
         </q-card-section>
 
