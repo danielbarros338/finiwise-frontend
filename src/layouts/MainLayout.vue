@@ -42,9 +42,7 @@
     <!-- Área principal do conteúdo -->
     <q-page-container>
       <q-page class="q-pa-md">
-        <!-- Conteúdo principal da dashboard -->
-        <div class="text-h5">Bem-vindo à Dashboard</div>
-        <p>Aqui você pode gerenciar seus cartões, ganhos, gastos e carteiras.</p>
+        <router-view />
       </q-page>
     </q-page-container>
   </q-layout>
