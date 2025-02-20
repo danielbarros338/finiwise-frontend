@@ -1,102 +1,65 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHh lpR fFf">
+    <!-- Cabeçalho da Dashboard -->
     <q-header elevated>
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <q-toolbar-title> Dashboard </q-toolbar-title>
+        <!-- Botão de menu no canto superior direito -->
+        <q-btn flat round icon="menu" @click="toggleDrawer" class="q-ml-auto" />
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
+    <!-- Menu lateral que abre a partir da direita -->
+    <q-drawer v-model="drawerOpen" side="right" bordered overlay>
       <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
-
-        <EssentialLink
-          v-for="link in linksList"
-          :key="link.title"
-          v-bind="link"
-        />
+        <q-item clickable v-ripple>
+          <q-item-section avatar>
+            <q-icon name="credit_card" />
+          </q-item-section>
+          <q-item-section>Cartões</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple>
+          <q-item-section avatar>
+            <q-icon name="attach_money" />
+          </q-item-section>
+          <q-item-section>Ganhos</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple>
+          <q-item-section avatar>
+            <q-icon name="money_off" />
+          </q-item-section>
+          <q-item-section>Gastos</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple>
+          <q-item-section avatar>
+            <q-icon name="account_balance_wallet" />
+          </q-item-section>
+          <q-item-section>Carteiras</q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
+    <!-- Área principal do conteúdo -->
     <q-page-container>
-      <router-view />
+      <q-page class="q-pa-md">
+        <!-- Conteúdo principal da dashboard -->
+        <div class="text-h5">Bem-vindo à Dashboard</div>
+        <p>Aqui você pode gerenciar seus cartões, ganhos, gastos e carteiras.</p>
+      </q-page>
     </q-page-container>
   </q-layout>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import EssentialLink, { type EssentialLinkProps } from 'components/EssentialLink.vue';
+import { ref } from 'vue'
 
-const linksList: EssentialLinkProps[] = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-];
+const drawerOpen = ref(false)
 
-const leftDrawerOpen = ref(false);
-
-function toggleLeftDrawer () {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
+const toggleDrawer = () => {
+  drawerOpen.value = !drawerOpen.value
 }
 </script>
+
+<style scoped>
+/* Você pode adicionar estilos adicionais aqui se necessário */
+</style>
