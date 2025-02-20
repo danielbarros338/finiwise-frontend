@@ -1,43 +1,51 @@
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout view="hHh lpR fFf" style="background-color: #1e1e1e">
     <!-- Cabeçalho da Dashboard -->
-    <q-header elevated>
+    <q-header elevated style="background-color: #ffa100">
       <q-toolbar>
-        <q-toolbar-title> Dashboard </q-toolbar-title>
-        <!-- Botão de menu no canto superior direito -->
-        <q-btn flat round icon="menu" @click="toggleDrawer" class="q-ml-auto" />
+        <q-toolbar-title>Dashboard</q-toolbar-title>
+
+        <q-btn flat round icon="menu">
+          <q-menu>
+            <q-list style="min-width: 200px">
+              <q-item clickable v-close-popup>
+                <q-item-section>
+                  <div><q-icon class="q-mr-sm" name="attach_money" />Ganhos</div>
+                </q-item-section>
+              </q-item>
+              <q-separator />
+
+              <q-item clickable v-close-popup>
+                <q-item-section>
+                  <div><q-icon class="q-mr-sm" name="money_off" />Gastos</div>
+                </q-item-section>
+              </q-item>
+              <q-separator />
+
+              <q-item clickable v-close-popup>
+                <q-item-section>
+                  <div><q-icon class="q-mr-sm" name="credit_card" />Cartões</div>
+                </q-item-section>
+              </q-item>
+              <q-separator />
+
+              <q-item clickable v-close-popup>
+                <q-item-section>
+                  <div><q-icon class="q-mr-sm" name="account_balance_wallet" />Carteiras</div>
+                </q-item-section>
+              </q-item>
+              <q-separator />
+
+              <q-item clickable v-close-popup>
+                <q-item-section style="color: red">
+                  <div><q-icon class="q-mr-sm" name="logout" />Sair</div>
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
       </q-toolbar>
     </q-header>
-
-    <!-- Menu lateral que abre a partir da direita -->
-    <q-drawer v-model="drawerOpen" side="right" bordered overlay>
-      <q-list>
-        <q-item clickable v-ripple>
-          <q-item-section avatar>
-            <q-icon name="credit_card" />
-          </q-item-section>
-          <q-item-section>Cartões</q-item-section>
-        </q-item>
-        <q-item clickable v-ripple>
-          <q-item-section avatar>
-            <q-icon name="attach_money" />
-          </q-item-section>
-          <q-item-section>Ganhos</q-item-section>
-        </q-item>
-        <q-item clickable v-ripple>
-          <q-item-section avatar>
-            <q-icon name="money_off" />
-          </q-item-section>
-          <q-item-section>Gastos</q-item-section>
-        </q-item>
-        <q-item clickable v-ripple>
-          <q-item-section avatar>
-            <q-icon name="account_balance_wallet" />
-          </q-item-section>
-          <q-item-section>Carteiras</q-item-section>
-        </q-item>
-      </q-list>
-    </q-drawer>
 
     <!-- Área principal do conteúdo -->
     <q-page-container>
@@ -48,16 +56,8 @@
   </q-layout>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-
-const drawerOpen = ref(false)
-
-const toggleDrawer = () => {
-  drawerOpen.value = !drawerOpen.value
-}
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
-/* Você pode adicionar estilos adicionais aqui se necessário */
+/* Estilos adicionais, se necessário */
 </style>
