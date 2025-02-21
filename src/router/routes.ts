@@ -4,7 +4,12 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
+    children: [
+      { path: '', component: () => import('pages/IndexPage.vue') },
+      // Sessão de ganhos
+      { path: 'earning', component: () => import('pages/earning/IndexPage.vue') },
+      { path: 'earning/earning-list', component: () => import('pages/earning/EarningPage.vue') },
+    ],
   },
   {
     path: '/auth',
