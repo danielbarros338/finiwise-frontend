@@ -49,6 +49,10 @@
       <q-btn round color="orange" icon="add" @click="openAddDialog" />
     </q-page-sticky>
 
+    <q-page-sticky style="bottom: 10px; left: 10px" position="bottom-left">
+      <q-btn round color="red" icon="arrow_back" to="/earning" />
+    </q-page-sticky>
+
     <!-- Diálogo para criação/edição (o filtro de carteira não faz parte do formulário) -->
     <q-dialog v-model="dialog">
       <q-card style="width: 95%">

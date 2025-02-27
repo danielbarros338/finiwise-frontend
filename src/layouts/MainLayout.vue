@@ -9,7 +9,7 @@
           <q-menu>
             <q-list style="min-width: 200px">
               <q-item clickable v-close-popup>
-                <q-item-section>
+                <q-item-section @click="sendTo('earning')">
                   <div><q-icon class="q-mr-sm" name="attach_money" />Ganhos</div>
                 </q-item-section>
               </q-item>
@@ -56,7 +56,15 @@
   </q-layout>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+const $router = useRouter()
+
+async function sendTo(page: string): Promise<void> {
+  await $router.push(`/${page}`)
+}
+</script>
 
 <style scoped>
 /* Estilos adicionais, se necessário */

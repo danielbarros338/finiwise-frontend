@@ -18,6 +18,10 @@
         <div class="text-h6">Acessar Ganhos</div>
       </q-card-section>
     </q-card>
+
+    <q-page-sticky style="bottom: 10px; left: 10px" position="bottom-left">
+      <q-btn round color="red" icon="arrow_back" to="/" />
+    </q-page-sticky>
   </q-page>
 </template>
 
