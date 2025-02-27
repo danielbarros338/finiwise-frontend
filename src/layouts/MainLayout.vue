@@ -9,7 +9,7 @@
           <q-menu>
             <q-list style="min-width: 200px">
               <q-item clickable v-close-popup>
-                <q-item-section @click="sendTo('earning')">
+                <q-item-section @click="sendTo('earnings')">
                   <div><q-icon class="q-mr-sm" name="attach_money" />Ganhos</div>
                 </q-item-section>
               </q-item>

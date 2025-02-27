@@ -8,8 +8,8 @@ const routes: RouteRecordRaw[] = [
       { path: '', component: () => import('pages/IndexPage.vue') },
 
       // Sessão de ganhos
-      { path: 'earning', component: () => import('pages/earning/IndexPage.vue') },
-      { path: 'earning/earning-list', component: () => import('pages/earning/EarningPage.vue') },
+      { path: 'earnings', component: () => import('pages/earnings/IndexPage.vue') },
+      { path: 'earnings/earning-list', component: () => import('pages/earnings/EarningsPage.vue') },
     ],
   },
   {
