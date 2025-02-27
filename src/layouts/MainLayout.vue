@@ -22,7 +22,7 @@
               </q-item>
               <q-separator />
 
-              <q-item clickable v-close-popup>
+              <q-item clickable v-close-popup @click="sendTo('cards')">
                 <q-item-section>
                   <div><q-icon class="q-mr-sm" name="credit_card" />Cartões</div>
                 </q-item-section>

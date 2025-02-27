@@ -17,8 +17,12 @@ const routes: RouteRecordRaw[] = [
         path: 'revenues/revenues-list',
         component: () => import('pages/revenues/RevenuesPage.vue'),
       },
+
+      // Sessão de cartões
+      { path: 'cards', component: () => import('pages/cards/IndexPage.vue') },
     ],
   },
+
   {
     path: '/auth',
     component: () => import('layouts/DefaultLayout.vue'),
