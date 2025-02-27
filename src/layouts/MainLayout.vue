@@ -29,7 +29,7 @@
               </q-item>
               <q-separator />
 
-              <q-item clickable v-close-popup>
+              <q-item clickable v-close-popup @click="sendTo('wallets')">
                 <q-item-section>
                   <div><q-icon class="q-mr-sm" name="account_balance_wallet" />Carteiras</div>
                 </q-item-section>

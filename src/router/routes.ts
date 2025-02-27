@@ -20,6 +20,9 @@ const routes: RouteRecordRaw[] = [
 
       // Sessão de cartões
       { path: 'cards', component: () => import('pages/cards/IndexPage.vue') },
+
+      // Sessão de carteiras
+      { path: 'wallets', component: () => import('pages/wallets/IndexPage.vue') },
     ],
   },
 
