@@ -3,7 +3,7 @@
     <!-- Card com o gráfico dos últimos ganhos -->
     <q-card class="q-mb-md">
       <q-card-section>
-        <div class="text-h5">Últimos Ganhos</div>
+        <div class="text-h5">Últimos Gastos</div>
       </q-card-section>
       <q-card-section>
         <!-- Container para o gráfico -->
@@ -15,7 +15,7 @@
     <q-card clickable class="q-pa-md" @click="goToEarningsList">
       <q-card-section class="row items-center">
         <q-icon name="trending_up" size="2em" class="q-mr-sm" />
-        <div class="text-h6">Acessar Ganhos</div>
+        <div class="text-h6">Acessar Gastos</div>
       </q-card-section>
     </q-card>
 
@@ -35,7 +35,7 @@ const chartCanvas = ref<HTMLCanvasElement | null>(null)
 
 const goToEarningsList = async (): Promise<void> => {
   // Redireciona para a subrota de listagem de ganhos
-  await router.push('/earning/earning-list')
+  await router.push('/revenues/revenues-list')
 }
 
 onMounted(() => {
@@ -45,10 +45,10 @@ onMounted(() => {
       labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
       datasets: [
         {
-          label: 'Ganhos',
+          label: 'Gastos',
           data: [1000, 1500, 800, 1700, 1200, 1900],
-          backgroundColor: 'rgba(255, 165, 0, 0.5)',
-          borderColor: 'rgba(255, 165, 0, 1)',
+          backgroundColor: 'rgba(255, 0, 0, 0.5)',
+          borderColor: 'rgba(255, 0, 0, 1)',
           borderWidth: 1,
         },
       ],
@@ -61,7 +61,7 @@ onMounted(() => {
         responsive: true,
         plugins: {
           legend: { position: 'top' as const },
-          title: { display: true, text: 'Últimos Ganhos' },
+          title: { display: true, text: 'Últimos Gastos' },
         },
       },
     }

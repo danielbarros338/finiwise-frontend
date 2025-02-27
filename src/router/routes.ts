@@ -10,6 +10,13 @@ const routes: RouteRecordRaw[] = [
       // Sessão de ganhos
       { path: 'earnings', component: () => import('pages/earnings/IndexPage.vue') },
       { path: 'earnings/earning-list', component: () => import('pages/earnings/EarningsPage.vue') },
+
+      // Sessão de despesas
+      { path: 'revenues', component: () => import('pages/revenues/IndexPage.vue') },
+      {
+        path: 'revenues/revenues-list',
+        component: () => import('pages/revenues/RevenuesPage.vue'),
+      },
     ],
   },
   {

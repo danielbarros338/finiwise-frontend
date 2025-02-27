@@ -15,7 +15,7 @@
               </q-item>
               <q-separator />
 
-              <q-item clickable v-close-popup>
+              <q-item clickable v-close-popup @click="sendTo('revenues')">
                 <q-item-section>
                   <div><q-icon class="q-mr-sm" name="money_off" />Gastos</div>
                 </q-item-section>
