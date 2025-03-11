@@ -1,1 +1,7 @@
 /* app global css */
+:root {
+  --color-fw-primary: #8bc34a;
+  --color-fw-secondary: #00bcd4;
+  --color-fw-primary-light: rgb(184, 243, 117);
+  --color-fw-secondary-light: rgb(120, 230, 245);
+}
