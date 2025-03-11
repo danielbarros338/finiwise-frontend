@@ -36,7 +36,7 @@
               </q-item>
               <q-separator />
 
-              <q-item clickable v-close-popup>
+              <q-item clickable v-close-popup @click="sendTo('auth/login')">
                 <q-item-section style="color: red">
                   <div><q-icon class="q-mr-sm" name="logout" />Sair</div>
                 </q-item-section>
