@@ -1,7 +1,28 @@
 /* app global css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --color-fw-primary: #8bc34a;
   --color-fw-secondary: #00bcd4;
   --color-fw-primary-light: rgb(184, 243, 117);
   --color-fw-secondary-light: rgb(120, 230, 245);
+
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bg-primary {
+  background-color: var(--color-fw-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-fw-secondary);
+}
+
+.bg-primary-light {
+  background-color: var(--color-fw-primary-light);
+}
+
+.bg-secondary-light {
+  background-color: var(--color-fw-secondary-light);
 }
