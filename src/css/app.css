@@ -2,27 +2,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --color-fw-primary: #8bc34a;
+  --color-fw-primary: #2e86c1;
   --color-fw-secondary: #00bcd4;
-  --color-fw-primary-light: rgb(184, 243, 117);
+  --color-fw-primary-light: rgb(107, 163, 201);
   --color-fw-secondary-light: rgb(120, 230, 245);
 
-  color: #000;
+  --color-fw-grey-light: #f5f5f5;
+  --color-fw-grey: #cccccc;
+
+  --color-fw-blue-light: #d6eaf8;
+
+  --color-fw-button-primary: #4a90e2;
+
+  --color-fw-success: #28a745;
+  --color-fw-danger: #d9534f;
+  --color-fw-alert: #f4c20d;
+
+  --color-fw-text-primary: #333333;
+  --color-fw-text-secondary: #757575;
+
+  color: #333333;
   font-family: 'Roboto', sans-serif;
 }
 
-.bg-primary {
+.bg-fw-primary {
   background-color: var(--color-fw-primary);
 }
 
-.bg-secondary {
+.bg-fw-secondary {
   background-color: var(--color-fw-secondary);
 }
 
-.bg-primary-light {
+.bg-fw-primary-light {
   background-color: var(--color-fw-primary-light);
 }
 
-.bg-secondary-light {
+.bg-fw-secondary-light {
   background-color: var(--color-fw-secondary-light);
+}
+
+.bg-fw-grey-light {
+  background-color: var(--color-fw-grey-light);
+}
+
+.bg-fw-grey {
+  background-color: var(--color-fw-grey);
+}
+
+.bg-fw-blue-light {
+  background-color: var(--color-fw-blue-light);
 }

@@ -3,7 +3,7 @@
     <!-- Cabeçalho da Dashboard -->
     <q-header elevated class="modern-header">
       <q-toolbar class="toolbar">
-        <q-toolbar-title class="toolbar-title"></q-toolbar-title>
+        <q-toolbar-title class="toolbar-title">Finiwise</q-toolbar-title>
 
         <q-btn flat round icon="menu" class="menu-btn">
           <q-menu class="modern-menu">
@@ -71,12 +71,12 @@ async function sendTo(page: string): Promise<void> {
 <style scoped>
 /* Layout principal com fundo claro e moderno */
 .modern-layout {
-  background: #f4f7f6;
+  background: var(--color-fw-grey-light);
 }
 
 /* Cabeçalho com gradiente moderno e cor branca para os textos */
 .modern-header {
-  background: linear-gradient(90deg, #00bcd4, #8bc34a);
+  background: linear-gradient(90deg, var(--color-fw-secondary), var(--color-fw-primary));
   color: #fff;
 }
 
@@ -128,6 +128,6 @@ async function sendTo(page: string): Promise<void> {
 
 /* Área principal com fundo claro para contraste com o cabeçalho */
 .page-container {
-  background: #f4f7f6;
+  background: var(--color-fw-grey-light);
 }
 </style>

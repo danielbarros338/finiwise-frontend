@@ -1,14 +1,14 @@
 <template>
   <q-page class="q-pa-md">
     <!-- HEAD -->
-    <CardBase class="card-base-primary">
+    <CardBase class="bg-fw-blue-light">
       <div class="row items-center nowrap">
         <q-img
           src="https://cdn.quasar.dev/img/parallax1.jpg"
           alt="Imagem de fundo"
           height="100px"
           width="100px"
-          class="perfil-img"
+          class="perfil-img shadow-3"
           contain
         />
 
@@ -23,18 +23,21 @@
       v-model="tab"
       inline-label
       dense
-      class="bg-secondary text-white shadow-2 q-mt-md rounded-borders no-shadow text-white"
+      class="bg-fw-primary text-white q-mt-md no-shadow rounded-borders"
     >
-      <q-tab name="earnings" icon="mail" label="Ganhos mês" />
-      <q-tab name="revenues" icon="alarm" label="Gastos mês" />
-      <q-tab name="wallets" icon="movie" label="Carteiras" />
+      <q-tab name="earnings" icon="attach_money" label="Últimos ganhos" />
+      <q-tab name="revenues" icon="money_off" label="Últimos gastos" />
+      <q-tab name="wallets" icon="wallet" label="Saldo das carteiras" />
     </q-tabs>
+
+    <ResumeComponent :tab="tab" class="bg-fw-primary q-mt-md" />
   </q-page>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import CardBase from 'src/components/shared/CardBase.vue'
+import ResumeComponent from 'src/components/home/ResumeComponent.vue'
 
 const tab = ref('earnings')
 </script>
@@ -42,7 +45,6 @@ const tab = ref('earnings')
 <style scoped>
 .perfil-img {
   border-radius: 100px !important;
-  border: 2px solid var(--color-fw-secondary-light);
 }
 
 .resume-table {
