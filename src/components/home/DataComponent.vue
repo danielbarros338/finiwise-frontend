@@ -39,7 +39,7 @@ const iconConfig = computed(() => {
       }
     case 'earnings':
       return {
-        icon: 'money',
+        icon: 'attach_money',
         color: '--color-fw-success',
       }
     case 'wallets':

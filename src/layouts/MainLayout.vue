@@ -3,7 +3,7 @@
     <!-- Cabeçalho da Dashboard -->
     <q-header elevated class="modern-header">
       <q-toolbar class="toolbar">
-        <q-toolbar-title class="toolbar-title">Finiwise</q-toolbar-title>
+        <q-toolbar-title class="toolbar-title" @click="sendTo('/')">Finiwise</q-toolbar-title>
 
         <q-btn flat round icon="menu" class="menu-btn">
           <q-menu class="modern-menu">

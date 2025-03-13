@@ -52,3 +52,7 @@
 .bg-fw-blue-light {
   background-color: var(--color-fw-blue-light);
 }
+
+.bg-fw-button-primary {
+  background-color: var(--color-fw-button-primary);
+}
