@@ -7,14 +7,14 @@
 
     <!-- Informações da Transação -->
     <div class="transaction-info">
-      <p class="text-h6 transaction-name q-mb-none">nome</p>
-      <p class="transaction-sub q-mb-none">categoria</p>
+      <p class="text-h6 transaction-name q-mb-none">{{ data.name }}</p>
+      <p class="transaction-sub q-mb-none">{{ data.typeId }}</p>
     </div>
 
     <!-- Valor e Data -->
     <div class="transaction-details">
-      <p class="transaction-amount q-mb-none">R$ xx,xx</p>
-      <p class="transaction-sub q-mb-none">data</p>
+      <p class="transaction-amount q-mb-none">R$ {{ data.value }}</p>
+      <p class="transaction-sub q-mb-none">{{ data.date }}</p>
     </div>
   </div>
 </template>
@@ -24,6 +24,10 @@ import { computed } from 'vue'
 
 const props = defineProps({
   tab: String,
+  data: {
+    type: Object,
+    default: () => ({}),
+  },
 })
 
 const iconConfig = computed(() => {
