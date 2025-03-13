@@ -2,6 +2,7 @@
   <CardBase>
     <span class="text-h6 text-white">{{ tab !== 'wallets' ? 'Últimos dias' : 'Resumo' }}</span>
 
+    <!-- TODO: Exibir no máximo 6 -->
     <template v-for="(data, i) in dataArrSelected" :key="`data-${i}`">
       <DataComponent :data="data" :tab="tab" class="bg-fw-blue-light" />
     </template>

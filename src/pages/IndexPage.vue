@@ -30,8 +30,9 @@
       <q-tab name="wallets" icon="wallet" label="Saldo das carteiras" />
     </q-tabs>
 
-    <!-- TODO: CORRIGIR TIPAGEM -->
-    <ResumeComponent :dataArr="data as any" :tab="tab" class="bg-fw-primary q-mt-md" />
+    <ResumeComponent :dataArr="data" :tab="tab" class="bg-fw-primary q-mt-md" />
+
+    <GraphComponent :tab="tab" :dataArr="data" class="bg-fw-blue-light q-mt-md" />
   </q-page>
 </template>
 
@@ -39,6 +40,7 @@
 import { ref } from 'vue'
 import CardBase from 'src/components/shared/CardBase.vue'
 import ResumeComponent from 'src/components/home/ResumeComponent.vue'
+import GraphComponent from 'src/components/home/GraphComponent.vue'
 
 const tab = ref('earnings')
 
