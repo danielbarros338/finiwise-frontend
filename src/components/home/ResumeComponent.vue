@@ -13,7 +13,7 @@
 import { computed } from 'vue'
 
 import CardBase from 'src/components/shared/CardBase.vue'
-import DataComponent from 'src/components/home/DataComponent.vue'
+import DataComponent from 'src/components/shared/DataComponent.vue'
 
 const props = defineProps({
   tab: {

@@ -16,6 +16,8 @@
       <p class="transaction-amount q-mb-none">R$ {{ data.value }}</p>
       <p class="transaction-sub q-mb-none">{{ data.date }}</p>
     </div>
+
+    <slot name="side-menu"></slot>
   </div>
 </template>
 
